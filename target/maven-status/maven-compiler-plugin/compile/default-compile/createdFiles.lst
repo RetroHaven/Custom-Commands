@@ -1,0 +1,5 @@
+com\retrohaven\customcommands\commands\MeowCommand.class
+com\retrohaven\spawnerpickup\listeners\SpawnerBreakListener.class
+com\retrohaven\customcommands\commands\HugCommand.class
+com\retrohaven\customcommands\CustomCommands.class
+com\retrohaven\customcommands\commands\WaveCommand.class
