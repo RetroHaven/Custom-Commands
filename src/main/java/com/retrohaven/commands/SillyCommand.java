@@ -1,13 +1,12 @@
 package com.retrohaven.customcommands.commands;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class HugCommand implements CommandExecutor {
+public class SillyCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
@@ -17,25 +16,13 @@ public class HugCommand implements CommandExecutor {
 
         Player player = (Player) sender;
 
-        if (!player.hasPermission("customcommands.hug")) {
+        if (!player.hasPermission("customcommands.silly")) {
             player.sendMessage(ChatColor.RED + "You do not have permission to use this command.");
-            return true;
+            return true; // Returning true prevents the "Usage" message from appearing
         }
 
-        if (args.length < 1) {
-            player.sendMessage(ChatColor.RED + "Usage: /hug <player>");
-            return true;
-        }
-
-        Player target = Bukkit.getPlayer(args[0]);
-
-        if (target == null || !target.isOnline()) {
-            player.sendMessage(ChatColor.RED + "That player is not online.");
-            return true;
-        }
-
-        String message = ChatColor.LIGHT_PURPLE + player.getName() + " has hugged " + target.getName() + "Awww";
-        Bukkit.broadcastMessage(message);
+        String message = ChatColor.LIGHT_PURPLE + "<" + player.getName() + "> Silly!";
+        player.getServer().broadcastMessage(message);
         return true;
     }
 }

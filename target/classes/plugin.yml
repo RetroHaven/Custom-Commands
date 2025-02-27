@@ -1,26 +1,35 @@
 name: CustomCommands
 main: com.retrohaven.customcommands.CustomCommands
 version: 1.0
+api-version: 1.7.3
+author: RetroHaven
 commands:
   meow:
-    description: Makes you meow in chat
+    description: Meows in chat
+    usage: /meow
     permission: customcommands.meow
   hug:
-    description: Hug another player
+    description: Hugs a player
     usage: /hug <player>
     permission: customcommands.hug
   wave:
-    description: Wave at another player
+    description: Waves at a player
     usage: /wave <player>
     permission: customcommands.wave
-
+  silly:
+    description: Broadcasts a silly message
+    usage: /silly
+    permission: customcommands.silly
 permissions:
   customcommands.meow:
-    description: Allows the player to use /meow
-    default: op
+    description: Allows use of /meow
+    default: true
   customcommands.hug:
-    description: Allows the player to use /hug
+    description: Allows use of /hug
     default: op
   customcommands.wave:
-    description: Allows the player to use /wave
-    default: op
+    description: Allows use of /wave
+    default: true
+  customcommands.silly:
+    description: Allows use of /silly
+    default: true
