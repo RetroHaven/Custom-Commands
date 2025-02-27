@@ -3,6 +3,7 @@ main: com.retrohaven.customcommands.CustomCommands
 version: 1.0
 api-version: 1.7.3
 author: Lilly E (retrorandom)
+
 commands:
   meow:
     description: Meows in chat
@@ -20,6 +21,15 @@ commands:
     description: Be silly
     usage: /silly
     permission: customcommands.silly
+  pet:
+    description: Pet a player warmly
+    usage: /pet <player>
+    permission: customcommands.pet
+  milk:
+    description: Milk another player and receive a milk bucket
+    usage: /milk <player>
+    permission: customcommands.milk
+
 permissions:
   customcommands.meow:
     description: Allows use of /meow
@@ -33,3 +43,9 @@ permissions:
   customcommands.silly:
     description: Allows use of /silly
     default: true
+  customcommands.pet:
+    description: Allows use of /pet
+    default: true
+  customcommands.milk:
+    description: Allows use of /milk
+    default: op

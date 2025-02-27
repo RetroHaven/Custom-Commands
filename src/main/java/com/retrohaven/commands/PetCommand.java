@@ -7,35 +7,34 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class HugCommand implements CommandExecutor {
+public class PetCommand implements CommandExecutor {
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage("Only players can use this command.");
-            return false;
+            sender.sendMessage(ChatColor.RED + "Only players can use this command!");
+            return true;
         }
 
         Player player = (Player) sender;
 
-        if (!player.hasPermission("customcommands.hug")) {
-            player.sendMessage(ChatColor.RED + "You do not have permission to use this command.");
+        if (!player.hasPermission("customcommands.pet")) {
+            player.sendMessage(ChatColor.RED + "You don't have permission to use this command!");
             return true;
         }
 
-        if (args.length < 1) {
-            player.sendMessage(ChatColor.RED + "Usage: /hug <player>");
+        if (args.length == 0) {
+            player.sendMessage(ChatColor.RED + "Usage: /pet <player>");
             return true;
         }
 
         Player target = Bukkit.getPlayer(args[0]);
-
         if (target == null || !target.isOnline()) {
-            player.sendMessage(ChatColor.RED + "That player is not online.");
+            player.sendMessage(ChatColor.RED + "That player is not online!");
             return true;
         }
 
-        String message = ChatColor.LIGHT_PURPLE + player.getName() + " has hugged " + target.getName() + " Awww";
-        Bukkit.broadcastMessage(message);
+        Bukkit.broadcastMessage(ChatColor.LIGHT_PURPLE + player.getName() + " pets " + target.getName() + " :3");
         return true;
     }
 }
