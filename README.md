@@ -12,7 +12,7 @@ This plugin allows a player do certain commands. Created for RetroHaven.org
 
 `/wave <player>`
 
-`/silly <player>`
+`/silly`
 
 # Permissions
 `customcommands.meow`
