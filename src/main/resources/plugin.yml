@@ -22,7 +22,7 @@ commands:
     usage: /silly
     permission: customcommands.silly
   pet:
-    description: Pet a player warmly
+    description: Pet a player
     usage: /pet <player>
     permission: customcommands.pet
   milk:
@@ -33,19 +33,19 @@ commands:
 permissions:
   customcommands.meow:
     description: Allows use of /meow
-    default: true
+    default: false
   customcommands.hug:
     description: Allows use of /hug
-    default: op
+    default: false
   customcommands.wave:
     description: Allows use of /wave
-    default: true
+    default: false
   customcommands.silly:
     description: Allows use of /silly
-    default: true
+    default: false
   customcommands.pet:
     description: Allows use of /pet
-    default: true
+    default: false
   customcommands.milk:
     description: Allows use of /milk
-    default: op
+    default: false
