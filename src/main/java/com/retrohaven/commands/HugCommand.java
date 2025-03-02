@@ -35,9 +35,9 @@ public class HugCommand implements CommandExecutor {
         }
 
         if (player.getName() == target.getName()) {
-            String message = ChatColor.LIGHT_PURPLE + player.getName() + " has hugged themselves. Awww";
+            String message = ChatColor.LIGHT_PURPLE + player.getName() + " has hugged themselves! Awww";
         } else {
-            String message = ChatColor.LIGHT_PURPLE + player.getName() + " has hugged " + target.getName() + ". Awww";
+            String message = ChatColor.LIGHT_PURPLE + player.getName() + " has hugged " + target.getName() + "! Awww";
         }
         Bukkit.broadcastMessage(message);
         return true;
