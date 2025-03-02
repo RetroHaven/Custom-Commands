@@ -41,9 +41,14 @@ public class MilkCommand implements CommandExecutor {
         player.getInventory().addItem(milkBucket);
 
         // Send messages
-        player.sendMessage(ChatColor.AQUA + "You have milked " + target.getName() + "!");
-        target.sendMessage(ChatColor.YELLOW + player.getName() + " has milked you!");
-        Bukkit.broadcastMessage(ChatColor.GOLD + player.getName() + " just milked " + target.getName() + "!");
+        if (player.getName() == target.getName()) {
+            player.sendMessage(ChatColor.LIGHT_PURPLE + "You have milked yourself!");
+            Bukkit.broadcastMessage(ChatColor.GOLD + player.getName() + " just milked themselves!");
+        } else {
+            player.sendMessage(ChatColor.AQUA + "You have milked " + target.getName() + "!");
+            target.sendMessage(ChatColor.YELLOW + player.getName() + " has milked you!");
+            Bukkit.broadcastMessage(ChatColor.GOLD + player.getName() + " just milked " + target.getName() + "!");
+        }
 
         return true;
     }
