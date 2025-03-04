@@ -34,7 +34,11 @@ public class PetCommand implements CommandExecutor {
             return true;
         }
 
-        Bukkit.broadcastMessage(ChatColor.LIGHT_PURPLE + player.getName() + " pets " + target.getName() + " :3");
+        if (player.getName() == target.getName()) {
+            Bukkit.broadcastMessage(ChatColor.LIGHT_PURPLE + player.getName() + " pets themselves :3");
+        } else {
+            Bukkit.broadcastMessage(ChatColor.LIGHT_PURPLE + player.getName() + " pets " + target.getName() + " :3");
+        }
         return true;
     }
 }

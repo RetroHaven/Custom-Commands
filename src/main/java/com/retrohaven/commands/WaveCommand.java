@@ -35,6 +35,9 @@ public class WaveCommand implements CommandExecutor {
         }
 
         String message = ChatColor.AQUA + player.getName() + " waves at " + target.getName() + "!";
+        if (player.getName() == target.getName()) {
+            message = ChatColor.AQUA + player.getName() + " waves at themselves!";
+        }
         Bukkit.broadcastMessage(message);
         return true;
     }
