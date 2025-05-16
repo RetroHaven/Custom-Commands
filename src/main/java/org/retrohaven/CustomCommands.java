@@ -1,11 +1,11 @@
-package com.retrohaven.customcommands;
+package org.retrohaven;
 
-import com.retrohaven.customcommands.commands.MilkCommand;
-import com.retrohaven.customcommands.commands.PetCommand;
-import com.retrohaven.customcommands.commands.HugCommand;
-import com.retrohaven.customcommands.commands.MeowCommand;
-import com.retrohaven.customcommands.commands.SillyCommand;
-import com.retrohaven.customcommands.commands.WaveCommand;
+import org.retrohaven.commands.MilkCommand;
+import org.retrohaven.commands.PetCommand;
+import org.retrohaven.commands.HugCommand;
+import org.retrohaven.commands.MeowCommand;
+import org.retrohaven.commands.SillyCommand;
+import org.retrohaven.commands.WaveCommand;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

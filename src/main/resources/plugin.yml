@@ -1,8 +1,8 @@
 name: CustomCommands
-main: com.retrohaven.customcommands.CustomCommands
+main: org.retrohaven.customcommands.CustomCommands
 version: 1.0
 api-version: 1.7.3
-author: Lilly E (retrorandom)
+author: Lilly (retrorandom)
 
 commands:
   meow:

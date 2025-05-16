@@ -1,4 +1,4 @@
-package com.retrohaven.customcommands.commands;
+package org.retrohaven.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

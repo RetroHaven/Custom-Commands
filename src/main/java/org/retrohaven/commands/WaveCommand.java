@@ -1,4 +1,4 @@
-package com.retrohaven.customcommands.commands;
+package org.retrohaven.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class HugCommand implements CommandExecutor {
+public class WaveCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
@@ -17,13 +17,13 @@ public class HugCommand implements CommandExecutor {
 
         Player player = (Player) sender;
 
-        if (!player.hasPermission("customcommands.hug")) {
+        if (!player.hasPermission("customcommands.wave")) {
             player.sendMessage(ChatColor.RED + "You do not have permission to use this command.");
             return true;
         }
 
         if (args.length < 1) {
-            player.sendMessage(ChatColor.RED + "Usage: /hug <player>");
+            player.sendMessage(ChatColor.RED + "Usage: /wave <player>");
             return true;
         }
 
@@ -34,9 +34,9 @@ public class HugCommand implements CommandExecutor {
             return true;
         }
 
-        String message = ChatColor.LIGHT_PURPLE + player.getName() + " has hugged " + target.getName() + "! Awww";
+        String message = ChatColor.AQUA + player.getName() + " waves at " + target.getName() + "!";
         if (player.getName() == target.getName()) {
-            message = ChatColor.LIGHT_PURPLE + player.getName() + " has hugged themselves! Awww";
+            message = ChatColor.AQUA + player.getName() + " waves at themselves!";
         }
         Bukkit.broadcastMessage(message);
         return true;
